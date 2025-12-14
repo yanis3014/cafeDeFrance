@@ -1,8 +1,8 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 import { menuData } from '@/app/lib/data';
 import { notFound } from 'next/navigation';
-import MenuPlatsList from '@/components/MenuPlatsList';
 import FadeIn from '@/components/FadeIn';
 
 interface PageProps {
@@ -59,7 +59,36 @@ export default async function MenuPage({ params }: PageProps) {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 md:px-8 py-6 md:py-8 lg:py-12">
+      {/* Hero Section avec Image de Couverture */}
+      <section className="relative h-[40vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src={menu.coverImage}
+            alt={menu.titre}
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+        </div>
+        {/* Overlay sombre */}
+        <div className="absolute inset-0 bg-[#0F1C2E]/70"></div>
+        {/* Contenu */}
+        <div className="relative z-10 text-center px-4">
+          <FadeIn delay={0.2}>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white mb-3 md:mb-4">
+              {menu.titre}
+            </h1>
+          </FadeIn>
+          <FadeIn delay={0.4}>
+            <p className="text-base md:text-xl lg:text-2xl text-white/90 font-sans">
+              {menu.sousTitre}
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-6 md:py-12 lg:py-16">
         {/* Bouton Retour Desktop */}
         <FadeIn delay={0}>
           <Link
@@ -71,24 +100,50 @@ export default async function MenuPage({ params }: PageProps) {
           </Link>
         </FadeIn>
 
-        {/* Titre */}
-        <FadeIn delay={0.2}>
-          <div className="text-center mb-8 md:mb-12 lg:mb-16">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold mb-3 md:mb-4">
-              {menu.titre}
-            </h1>
-            <p className="text-base md:text-lg lg:text-xl text-gray-600 font-sans">
-              {menu.sousTitre}
-            </p>
-          </div>
-        </FadeIn>
+        {/* Grille Gourmande des Plats - Responsive */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-10">
+          {menu.plats.map((plat, index) => (
+            <FadeIn key={plat.id} delay={index * 0.1}>
+              {/* Mobile: Layout Horizontal | Desktop: Layout Vertical */}
+              <div className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-row md:flex-col">
+                {/* Image du plat */}
+                <div className="relative w-28 h-28 md:w-full md:h-64 md:h-72 lg:h-80 flex-shrink-0 md:flex-shrink overflow-hidden rounded-l-lg md:rounded-l-none md:rounded-t-lg">
+                  <Image
+                    src={plat.image}
+                    alt={plat.nom}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 112px, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  {/* Overlay subtil au survol (desktop seulement) */}
+                  <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
 
-        {/* Liste des plats - Style Menu Papier avec animations */}
-        <MenuPlatsList plats={menu.plats} />
+                {/* Contenu de la carte */}
+                <div className="p-4 md:p-6 md:p-8 flex-1 flex flex-col justify-between">
+                  {/* Nom et Prix */}
+                  <div className="flex items-start justify-between gap-3 md:gap-4 mb-2 md:mb-3">
+                    <h3 className="font-serif font-bold text-lg md:text-xl lg:text-2xl text-[#0F1C2E] flex-1 leading-tight">
+                      {plat.nom}
+                    </h3>
+                    <div className="text-[#C5A059] font-semibold text-lg md:text-xl lg:text-2xl flex-shrink-0">
+                      {plat.prix.toFixed(2)} €
+                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-xs md:text-sm lg:text-base text-gray-600 font-sans leading-relaxed">
+                    {plat.description}
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
 
         {/* Footer discret */}
-        <div className="mt-16 pt-8 border-t border-gray-200 text-center">
-          <p className="text-sm text-gray-500 font-sans">
+        <div className="mt-12 md:mt-16 lg:mt-20 pt-6 md:pt-8 border-t border-gray-200 text-center">
+          <p className="text-xs md:text-sm text-gray-500 font-sans">
             Tous nos plats sont préparés avec des produits frais et de saison
           </p>
         </div>
