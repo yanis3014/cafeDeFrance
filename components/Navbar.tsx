@@ -85,52 +85,60 @@ export default function Navbar() {
 
         {/* Mobile Menu Overlay */}
         {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 bg-[#FAF9F6] z-50 mt-[73px] overflow-y-auto">
-            <div className="flex flex-col min-h-full">
-              {/* Close Button */}
-              <div className="flex justify-end p-4 sticky top-0 bg-[#FAF9F6] z-10">
-                <button
-                  onClick={closeMenu}
-                  className="p-2 text-[#0F1C2E] hover:text-[#C5A059] transition-colors"
-                  aria-label="Close menu"
-                >
-                  <X className="h-6 w-6" />
-                </button>
-              </div>
+          <>
+            {/* Backdrop */}
+            <div 
+              className="md:hidden fixed inset-0 bg-black/50 z-[60]"
+              onClick={closeMenu}
+            />
+            {/* Menu Panel */}
+            <div className="md:hidden fixed inset-0 top-[73px] bg-[#FAF9F6] z-[70] overflow-y-auto">
+              <div className="flex flex-col min-h-full">
+                {/* Close Button */}
+                <div className="flex justify-end p-4 sticky top-0 bg-[#FAF9F6] z-10 border-b border-gray-200">
+                  <button
+                    onClick={closeMenu}
+                    className="p-2 text-[#0F1C2E] hover:text-[#C5A059] transition-colors"
+                    aria-label="Close menu"
+                  >
+                    <X className="h-6 w-6" />
+                  </button>
+                </div>
 
-              {/* Menu Items */}
-              <div className="flex flex-col items-center justify-center flex-1 space-y-6 md:space-y-8 px-4 pb-8">
-                <a
-                  href="#histoire"
-                  onClick={closeMenu}
-                  className="text-2xl font-serif font-semibold text-[#0F1C2E] hover:text-[#C5A059] transition-colors"
-                >
-                  L'Histoire
-                </a>
-                <a
-                  href="#carte"
-                  onClick={closeMenu}
-                  className="text-2xl font-serif font-semibold text-[#0F1C2E] hover:text-[#C5A059] transition-colors"
-                >
-                  La Carte
-                </a>
-                <a
-                  href="#experience"
-                  onClick={closeMenu}
-                  className="text-2xl font-serif font-semibold text-[#0F1C2E] hover:text-[#C5A059] transition-colors"
-                >
-                  L'Expérience
-                </a>
-                <Link
-                  href="/reserve"
-                  onClick={closeMenu}
-                  className="bg-[#C5A059] text-white px-8 py-3 rounded-md font-medium hover:bg-[#b38a4d] transition-colors text-lg"
-                >
-                  Réserver
-                </Link>
+                {/* Menu Items */}
+                <div className="flex flex-col items-center justify-center flex-1 space-y-6 px-4 py-8">
+                  <a
+                    href="#histoire"
+                    onClick={closeMenu}
+                    className="text-2xl font-serif font-semibold text-[#0F1C2E] hover:text-[#C5A059] transition-colors"
+                  >
+                    L'Histoire
+                  </a>
+                  <a
+                    href="#carte"
+                    onClick={closeMenu}
+                    className="text-2xl font-serif font-semibold text-[#0F1C2E] hover:text-[#C5A059] transition-colors"
+                  >
+                    La Carte
+                  </a>
+                  <a
+                    href="#experience"
+                    onClick={closeMenu}
+                    className="text-2xl font-serif font-semibold text-[#0F1C2E] hover:text-[#C5A059] transition-colors"
+                  >
+                    L'Expérience
+                  </a>
+                  <Link
+                    href="/reserve"
+                    onClick={closeMenu}
+                    className="bg-[#C5A059] text-white px-8 py-3 rounded-md font-medium hover:bg-[#b38a4d] transition-colors text-lg mt-4"
+                  >
+                    Réserver
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
+          </>
         )}
       </div>
     </nav>
