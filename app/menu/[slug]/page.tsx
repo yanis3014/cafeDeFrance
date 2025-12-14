@@ -46,12 +46,25 @@ export default async function MenuPage({ params }: PageProps) {
 
   return (
     <main className="min-h-screen bg-[#FAF9F6] text-[#0F1C2E]">
+      {/* Bouton Retour Fixe sur Mobile */}
+      <div className="sticky top-0 z-40 md:hidden bg-white/90 backdrop-blur border-b border-gray-200">
+        <div className="px-4 py-3 flex items-center">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-[#0F1C2E] hover:text-[#C5A059] transition-colors group"
+          >
+            <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform" />
+            <span className="text-sm font-medium">Retour</span>
+          </Link>
+        </div>
+      </div>
+
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-6 md:py-8 lg:py-12">
-        {/* Bouton Retour */}
+        {/* Bouton Retour Desktop */}
         <FadeIn delay={0}>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-[#0F1C2E] hover:text-[#C5A059] transition-colors mb-8 group"
+            className="hidden md:inline-flex items-center gap-2 text-[#0F1C2E] hover:text-[#C5A059] transition-colors mb-8 group"
           >
             <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform" />
             <span className="text-sm font-medium">Retour à l'accueil</span>
