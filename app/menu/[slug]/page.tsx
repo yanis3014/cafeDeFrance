@@ -34,7 +34,7 @@ export default async function MenuPage({ params }: PageProps) {
           </p>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-[#0F1C2E] hover:text-[#C5A059] transition-colors group"
+            className="inline-flex items-center gap-2 text-[#0F1C2E] hover:text-[#800020] transition-colors group"
           >
             <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform" />
             <span className="font-medium">Retour à l'accueil</span>
@@ -51,7 +51,7 @@ export default async function MenuPage({ params }: PageProps) {
         <div className="px-4 py-3 flex items-center">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-[#0F1C2E] hover:text-[#C5A059] transition-colors group"
+            className="inline-flex items-center gap-2 text-[#0F1C2E] hover:text-[#800020] transition-colors group"
           >
             <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform" />
             <span className="text-sm font-medium">Retour</span>
@@ -76,7 +76,7 @@ export default async function MenuPage({ params }: PageProps) {
         {/* Contenu */}
         <div className="relative z-10 text-center px-4">
           <FadeIn delay={0.2}>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white mb-3 md:mb-4">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white mb-3 md:mb-4 border-b-2 border-[#800020] pb-2 inline-block">
               {menu.titre}
             </h1>
           </FadeIn>
@@ -93,7 +93,7 @@ export default async function MenuPage({ params }: PageProps) {
         <FadeIn delay={0}>
           <Link
             href="/"
-            className="hidden md:inline-flex items-center gap-2 text-[#0F1C2E] hover:text-[#C5A059] transition-colors mb-8 group"
+            className="hidden md:inline-flex items-center gap-2 text-[#0F1C2E] hover:text-[#800020] transition-colors mb-8 group"
           >
             <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform" />
             <span className="text-sm font-medium">Retour à l'accueil</span>
@@ -105,7 +105,7 @@ export default async function MenuPage({ params }: PageProps) {
           {menu.plats.map((plat, index) => (
             <FadeIn key={plat.id} delay={index * 0.1}>
               {/* Mobile: Layout Horizontal | Desktop: Layout Vertical */}
-              <div className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-row md:flex-col">
+              <div className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:shadow-[#800020]/20 hover:border-[#800020]/50 transition-all duration-300 border border-gray-100 flex flex-row md:flex-col">
                 {/* Image du plat */}
                 <div className="relative w-28 h-28 md:w-full md:h-64 md:h-72 lg:h-80 flex-shrink-0 md:flex-shrink overflow-hidden rounded-l-lg md:rounded-l-none md:rounded-t-lg">
                   <Image
@@ -142,7 +142,7 @@ export default async function MenuPage({ params }: PageProps) {
         </div>
 
         {/* Footer discret */}
-        <div className="mt-12 md:mt-16 lg:mt-20 pt-6 md:pt-8 border-t border-gray-200 text-center">
+        <div className="mt-12 md:mt-16 lg:mt-20 pt-6 md:pt-8 border-t-2 border-[#800020]/30 text-center">
           <p className="text-xs md:text-sm text-gray-500 font-sans">
             Tous nos plats sont préparés avec des produits frais et de saison
           </p>

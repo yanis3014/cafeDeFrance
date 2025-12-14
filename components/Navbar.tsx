@@ -22,14 +22,14 @@ export default function Navbar() {
           {/* Desktop Layout */}
           <div className="hidden md:flex items-center justify-between">
             {/* Logo / Brand */}
-            <div className="font-serif text-xl md:text-2xl font-bold">Grand Café de France</div>
+            <div className="font-serif text-xl md:text-2xl font-bold text-[#800020]">Grand Café de France</div>
             
             {/* Navigation Links */}
             <ul className="flex space-x-8 uppercase text-sm">
               <li>
                 <a 
                   href="#histoire" 
-                  className="hover:text-[#C5A059] transition-colors"
+                  className="hover:text-[#800020] transition-colors"
                   onClick={closeMenu}
                 >
                   L'Histoire
@@ -38,7 +38,7 @@ export default function Navbar() {
               <li>
                 <a 
                   href="#carte" 
-                  className="hover:text-[#C5A059] transition-colors"
+                  className="hover:text-[#800020] transition-colors"
                   onClick={closeMenu}
                 >
                   La Carte
@@ -47,7 +47,7 @@ export default function Navbar() {
               <li>
                 <a 
                   href="#experience" 
-                  className="hover:text-[#C5A059] transition-colors"
+                  className="hover:text-[#800020] transition-colors"
                   onClick={closeMenu}
                 >
                   L'Expérience
@@ -58,7 +58,7 @@ export default function Navbar() {
             {/* Reservation Button */}
             <Link
               href="/reserve"
-              className="bg-[#C5A059] text-white px-4 py-2 rounded-md font-medium hover:bg-[#b38a4d] transition-colors text-sm"
+              className="bg-[#800020] text-white px-4 py-2 rounded-md font-medium hover:bg-[#800020]/90 transition-colors text-sm"
               onClick={closeMenu}
             >
               Réserver
@@ -68,7 +68,7 @@ export default function Navbar() {
           {/* Mobile Layout */}
           <div className="md:hidden flex items-center justify-between">
             {/* Logo */}
-            <div className="font-serif text-lg font-bold">Grand Café de France</div>
+            <div className="font-serif text-lg font-bold text-[#800020]">Grand Café de France</div>
             
             {/* Burger Menu Button */}
             <button
@@ -117,28 +117,28 @@ export default function Navbar() {
                 <a
                   href="#histoire"
                   onClick={closeMenu}
-                  className="text-3xl font-serif font-semibold text-[#0F1C2E] hover:text-[#C5A059] transition-colors"
+                  className="text-3xl font-serif font-semibold text-[#0F1C2E] hover:text-[#800020] transition-colors"
                 >
                   L'Histoire
                 </a>
                 <a
                   href="#carte"
                   onClick={closeMenu}
-                  className="text-3xl font-serif font-semibold text-[#0F1C2E] hover:text-[#C5A059] transition-colors"
+                  className="text-3xl font-serif font-semibold text-[#0F1C2E] hover:text-[#800020] transition-colors"
                 >
                   La Carte
                 </a>
                 <a
                   href="#experience"
                   onClick={closeMenu}
-                  className="text-3xl font-serif font-semibold text-[#0F1C2E] hover:text-[#C5A059] transition-colors"
+                  className="text-3xl font-serif font-semibold text-[#0F1C2E] hover:text-[#800020] transition-colors"
                 >
                   L'Expérience
                 </a>
                 <Link
                   href="/reserve"
                   onClick={closeMenu}
-                  className="bg-[#C5A059] text-white px-10 py-4 rounded-md font-medium hover:bg-[#b38a4d] transition-colors text-xl mt-6"
+                  className="bg-[#800020] text-white px-10 py-4 rounded-md font-medium hover:bg-[#800020]/90 transition-colors text-xl mt-6"
                 >
                   Réserver
                 </Link>

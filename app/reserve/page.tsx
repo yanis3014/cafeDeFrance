@@ -81,7 +81,7 @@ export default function ReservePage() {
         <div className="px-4 pt-8 pb-4">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-[#0F1C2E] hover:text-[#C5A059] transition-colors group"
+            className="inline-flex items-center gap-2 text-[#0F1C2E] hover:text-[#800020] transition-colors group"
           >
             <svg
               className="h-5 w-5 group-hover:-translate-x-1 transition-transform"
@@ -329,7 +329,7 @@ export default function ReservePage() {
                   <button
                     type="submit"
                     disabled={formState === 'loading'}
-                    className="w-full bg-[#C5A059] text-white px-6 py-4 rounded-md font-medium hover:bg-[#b38a4d] transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full bg-[#800020] text-white px-6 py-4 rounded-md font-medium hover:bg-[#800020]/90 transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {formState === 'loading' ? (
                       <>

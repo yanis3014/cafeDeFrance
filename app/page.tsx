@@ -60,7 +60,7 @@ export default function Page() {
       <section id="histoire" className="py-12 md:py-16 px-4 md:px-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 md:gap-8 items-center">
           <div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-4 border-b-2 border-[#800020] pb-2 inline-block">
               L'Histoire
             </h2>
             <p className="mb-4 leading-relaxed text-gray-700">
@@ -90,7 +90,7 @@ export default function Page() {
       {/* La Carte Section */}
       <section id="carte" className="py-12 md:py-16 px-4 md:px-8 bg-[#F2EFEA]">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-8 md:mb-12 border-b-2 border-[#800020] pb-2 inline-block">
             La Carte
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -98,7 +98,7 @@ export default function Page() {
             <FadeIn delay={0}>
               <Link
                 href="/menu/petit-dejeuner"
-                className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105"
+                className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg hover:shadow-[#800020]/20 hover:border-[#800020]/50 transition-all duration-300 cursor-pointer hover:scale-105 border border-transparent"
               >
               <div className="relative h-[300px] sm:h-[400px] md:h-[450px] overflow-hidden">
                 <Image
@@ -110,7 +110,7 @@ export default function Page() {
                 />
               </div>
               <div className="p-4 md:p-6">
-                <div className="flex items-center mb-3 md:mb-4 text-[#C5A059]">
+                <div className="flex items-center mb-3 md:mb-4 text-[#800020]">
                   <Coffee className="h-5 w-5 md:h-6 md:w-6 mr-2" />
                   <h3 className="text-lg md:text-xl font-serif font-semibold">Petit-déjeuner</h3>
                 </div>
@@ -125,7 +125,7 @@ export default function Page() {
             <FadeIn delay={0.2}>
               <Link
                 href="/menu/dejeuner"
-                className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105"
+                className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg hover:shadow-[#800020]/20 hover:border-[#800020]/50 transition-all duration-300 cursor-pointer hover:scale-105 border border-transparent"
               >
               <div className="relative h-[300px] sm:h-[400px] md:h-[450px] overflow-hidden">
                 <Image
@@ -137,7 +137,7 @@ export default function Page() {
                 />
               </div>
               <div className="p-4 md:p-6">
-                <div className="flex items-center mb-3 md:mb-4 text-[#C5A059]">
+                <div className="flex items-center mb-3 md:mb-4 text-[#800020]">
                   <Utensils className="h-5 w-5 md:h-6 md:w-6 mr-2" />
                   <h3 className="text-lg md:text-xl font-serif font-semibold">Déjeuner</h3>
                 </div>
@@ -152,7 +152,7 @@ export default function Page() {
             <FadeIn delay={0.4}>
               <Link
                 href="/menu/vins-cocktails"
-                className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105"
+                className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg hover:shadow-[#800020]/20 hover:border-[#800020]/50 transition-all duration-300 cursor-pointer hover:scale-105 border border-transparent"
               >
               <div className="relative h-[300px] sm:h-[400px] md:h-[450px] overflow-hidden">
                 <Image
@@ -164,7 +164,7 @@ export default function Page() {
                 />
               </div>
               <div className="p-4 md:p-6">
-                <div className="flex items-center mb-3 md:mb-4 text-[#C5A059]">
+                <div className="flex items-center mb-3 md:mb-4 text-[#800020]">
                   <Wine className="h-5 w-5 md:h-6 md:w-6 mr-2" />
                   <h3 className="text-lg md:text-xl font-serif font-semibold">Vins &amp; Cocktails</h3>
                 </div>
@@ -192,7 +192,7 @@ export default function Page() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-[#0F1C2E]/70"></div>
         <div className="relative z-10 max-w-2xl mx-auto px-4 md:px-8">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold text-white mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold text-white mb-4 border-b-2 border-[#800020] pb-2 inline-block">
             L'Expérience
           </h2>
           <p className="text-base md:text-lg text-white mb-6 md:mb-8">
@@ -202,7 +202,7 @@ export default function Page() {
           </p>
           <Link
             href="/reserve"
-            className="inline-block bg-[#C5A059] text-white px-6 py-3 rounded-md font-medium hover:bg-[#b38a4d] transition-colors text-sm md:text-base"
+            className="inline-block bg-[#800020] text-white px-6 py-3 rounded-md font-medium hover:bg-[#800020]/90 transition-colors text-sm md:text-base"
           >
             Vivre l'instant
           </Link>
@@ -224,7 +224,7 @@ export default function Page() {
           <div>
             <h4 className="text-lg font-serif font-semibold mb-3 text-white">Nous Trouver</h4>
             <p className="flex items-start">
-              <MapPin className="mr-2 h-5 w-5 text-[#C5A059]" /> 12 Promenade des Anglais
+              <MapPin className="mr-2 h-5 w-5 text-[#800020]" /> 12 Promenade des Anglais
               <br />
               06000 Nice, France
             </p>
@@ -232,29 +232,29 @@ export default function Page() {
           <div>
             <h4 className="text-lg font-serif font-semibold mb-3 text-white">Horaires</h4>
             <p>
-              <strong className="text-[#C5A059]">Lundi - Dimanche :</strong> 08h00 - 23h00
+              <strong className="text-[#800020]">Lundi - Dimanche :</strong> 08h00 - 23h00
             </p>
           </div>
           <div>
             <h4 className="text-lg font-serif font-semibold mb-3 text-white">Liens</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#histoire" className="hover:text-[#C5A059] transition-colors">
+                <a href="#histoire" className="hover:text-[#800020] transition-colors">
                   L'Histoire
                 </a>
               </li>
               <li>
-                <a href="#carte" className="hover:text-[#C5A059] transition-colors">
+                <a href="#carte" className="hover:text-[#800020] transition-colors">
                   La Carte
                 </a>
               </li>
               <li>
-                <a href="#experience" className="hover:text-[#C5A059] transition-colors">
+                <a href="#experience" className="hover:text-[#800020] transition-colors">
                   L'Expérience
                 </a>
               </li>
               <li>
-                <Link href="/reserve" className="hover:text-[#C5A059] transition-colors">
+                <Link href="/reserve" className="hover:text-[#800020] transition-colors">
                   Réserver
                 </Link>
               </li>
